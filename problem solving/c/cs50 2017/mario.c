@@ -1,29 +1,26 @@
 #include <stdio.h>
 #include <cs50.h>
-
-int main(void)
+int main (void)
 {
-	int x = 0;
-	do {
-		printf("Height:");
-		x = get_int();
-        if (x == 0)
+    int height = get_int("enter the height : ");
+    int j ;
+    for(int i = 0; i<height;i++)
+    {
+        for(int k = 0; k<height  - i;k++)
         {
-            return 0;
+            printf(" ");
         }
-	} while (x < 1 || x > 23);
-
-	for(int i = 0; i < x; i++)
-	{
-        for(int r = 0; r < x-i-1; r++)
+        for( j = 0; j < i+1  ;j++)
         {
-            printf("%s", " ");
+            
+            printf("#");
         }
-		for(int y = 0; y < i+2; y++)
-		{
-			printf("#");
-		}
-		printf("\n");
-	}
-	return 0;
+        printf("    ");
+        for( int q  = 0; q < i+1  ;q++)
+        {
+            
+            printf("#");
+        }
+        printf("\n");
+    }
 }
